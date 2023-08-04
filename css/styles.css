@@ -135,7 +135,7 @@ li {
 
 .nav-list-contacts {
   font-style: normal;
-  margin: 0 auto;
+  margin-left: auto;
 }
 .contacts-list {
   gap: 40px;
@@ -453,7 +453,6 @@ h1 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  width: 264px;
 }
 
 /**
