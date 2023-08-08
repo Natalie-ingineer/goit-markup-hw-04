@@ -399,13 +399,14 @@ h1 {
   margin-bottom: 32px;
 }
 .team-socials-item {
-  display: block;
+  display: flex;
   width: 40px;
   height: 40px;
   border: 1px solid var(--color-button);
   border-radius: 50%;
   background-color: var(--color-button);
-  padding: 12px;
+  justify-content: center;
+  align-items: center;
 }
 .social-icon {
   fill: var(--background-color-portfolio);
@@ -549,6 +550,13 @@ h1 {
   padding: 100px 0;
 }
 
+.footer .container {
+  display: flex;
+}
+.footer-box {
+  display: block;
+}
+
 .footer-logo-web {
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -571,4 +579,41 @@ h1 {
   letter-spacing: 0.02em;
   color: var(--background-color-portfolio);
   max-width: 264px;
+  display: block;
+}
+
+.footer-socials-wraper {
+  margin-left: 120px;
+}
+
+.footer-socials {
+  color: var(--primary-background);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.footer-socials-item {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-button);
+  border-radius: 50%;
+  background-color: var(--color-button);
+  align-items: center;
+  justify-content: center;
+}
+.footer-social-icon {
+  fill: var(--background-color-portfolio);
+  width: 24px;
+  height: 24px;
 }
