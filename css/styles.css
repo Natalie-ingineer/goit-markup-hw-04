@@ -16,6 +16,7 @@ body {
   --background-color-portfolio: #f4f4fd;
   --color-button-nav: #404bbf;
   --color-button-portfolio: #e7e9fc;
+  --border-customers: #8e8f99;
 }
 
 *,
@@ -408,6 +409,50 @@ h1 {
 }
 .social-icon {
   fill: var(--background-color-portfolio);
+  width: 16px;
+  height: 16px;
+}
+
+/**
+  |============================
+  |          Customers
+  |============================
+*/
+.customers {
+  background-color: var(--primary-background);
+  padding-bottom: 120px;
+}
+
+.customers-title {
+  color: var(--background-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: center;
+  text-transform: capitalize;
+  display: block;
+  align-items: center;
+  margin-bottom: 72px;
+  justify-content: center;
+  align-content: center;
+  padding-top: 120px;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.costomers-item {
+  border-radius: 4px;
+  border: 1px solid var(--border-customers);
+  padding: 16px 32px;
+}
+
+.costomers-icon {
+  width: 104px;
+  height: 56px;
+  fill: var(--border-customers);
 }
 /**
   |============================
