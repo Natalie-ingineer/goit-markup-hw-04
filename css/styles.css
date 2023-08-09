@@ -200,6 +200,9 @@ li {
   padding: 188px 0;
   width: 1400px;
   margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button {
