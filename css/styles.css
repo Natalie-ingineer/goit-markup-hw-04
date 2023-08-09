@@ -17,6 +17,7 @@ body {
   --color-button-nav: #404bbf;
   --color-button-portfolio: #e7e9fc;
   --border-customers: #8e8f99;
+  --socials-footer-color-link: #31d0aa;
 }
 
 *,
@@ -423,7 +424,6 @@ h1 {
   display: flex;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--color-button);
   border-radius: 50%;
   background-color: var(--color-button);
   justify-content: center;
@@ -434,11 +434,12 @@ h1 {
   max-width: 100%;
   display: block;
   object-fit: cover;
-  background-color: var(--color-button);
 }
 
 .social-icon:hover,
-.socials-link:hover {
+.socials-link:hover,
+.social-icon:focus,
+.socials-link:focus {
   fill: var(--color-button-portfolio);
   background-color: var(--color-button-nav);
 }
@@ -473,17 +474,33 @@ h1 {
   gap: 24px;
 }
 
-.costomers-item {
+.costomers-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  fill: var(--border-customers);
+}
+
+.costomers-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
   border-radius: 4px;
   border: 1px solid var(--border-customers);
+  justify-content: center;
+  align-items: center;
   padding: 16px 32px;
 }
 
-.costomers-icon {
-  width: 104px;
-  height: 56px;
-  fill: var(--border-customers);
+.costomers-link:hover,
+.costomers-icon:hover,
+.costomers-link:focus,
+.costomers-icon:focus {
+  fill: var(--color-button-nav);
+  border: 1px solid var(--color-button-nav);
 }
+
 /**
   |============================
   |         Portfolio
@@ -626,23 +643,32 @@ h1 {
   margin-bottom: 16px;
 }
 
-.footer-social-list {
+.footer-socials-list {
   display: flex;
   gap: 16px;
   justify-content: center;
 }
-.footer-socials-item {
+
+.footer-socials-link {
   display: flex;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--color-button);
   border-radius: 50%;
   background-color: var(--color-button);
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .footer-social-icon {
   fill: var(--background-color-portfolio);
-  width: 24px;
-  height: 24px;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.footer-social-icon:hover,
+.footer-socials-link:hover,
+.footer-social-icon:focus,
+.footer-socials-link:focus {
+  fill: var(--color-button-portfolio);
+  background-color: var(--socials-footer-color-link);
 }
