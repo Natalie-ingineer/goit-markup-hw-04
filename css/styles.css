@@ -129,6 +129,9 @@ li {
   display: block;
   padding: 24px 0;
   position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -173,6 +176,9 @@ li {
   font-style: normal;
   display: block;
   padding: 24px 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-list-link:hover,
 .contacts-list-link:focus {
@@ -216,6 +222,9 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-top: 48px;
+  transition-property: color, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -428,12 +437,18 @@ h1 {
   background-color: var(--color-button);
   justify-content: center;
   align-items: center;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   fill: var(--background-color-portfolio);
   max-width: 100%;
   display: block;
   object-fit: cover;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover,
@@ -480,6 +495,9 @@ h1 {
   display: block;
   object-fit: cover;
   fill: var(--border-customers);
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .costomers-link {
@@ -491,6 +509,9 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 16px 32px;
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .costomers-link:hover,
@@ -535,12 +556,17 @@ h1 {
   padding: 12px 24px;
   border: 1px solid var(--color-button-portfolio);
   border-radius: 4px;
+  transition-property: color, background, border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio:hover,
 .button-portfolio:focus {
   background: var(--color-button-nav);
   color: var(--primary-background);
   border: 1px solid transparent;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .prj-card-list {
@@ -585,6 +611,35 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+.box {
+  position: relative;
+  overflow: hidden;
+}
+.prj-card-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-overlay {
+  color: var(--background-color-portfolio);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  background-color: var(--color-button);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+  padding: 40px 32px;
+}
+
+.prj-card-link:hover .text-overlay,
+.prj-card-link:focus .text-overlay {
+  transform: translateY(0);
+}
 /**
   |============================
   |        Footer styles
@@ -657,12 +712,18 @@ h1 {
   background-color: var(--color-button);
   justify-content: center;
   align-items: center;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
   fill: var(--background-color-portfolio);
   max-width: 100%;
   display: block;
   object-fit: cover;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon:hover,
