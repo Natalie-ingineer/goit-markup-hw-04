@@ -127,11 +127,30 @@ li {
   list-style-type: none;
   display: block;
   padding: 24px 0;
+  position: relative;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-button-nav);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-button-nav);
+  transform: scaleX(0);
+  transition: transform 250ms linear;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.current::after {
+  transform: scaleX(1);
 }
 
 .nav-list-contacts {
@@ -172,6 +191,8 @@ li {
     ),
     url(../images/hero-bg.jpg);
   padding: 188px 0;
+  width: 1400px;
+  margin: 0 auto;
 }
 
 .button {
@@ -398,7 +419,7 @@ h1 {
   justify-content: center;
   margin-bottom: 32px;
 }
-.team-socials-item {
+.socials-link {
   display: flex;
   width: 40px;
   height: 40px;
@@ -410,8 +431,16 @@ h1 {
 }
 .social-icon {
   fill: var(--background-color-portfolio);
-  width: 16px;
-  height: 16px;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  background-color: var(--color-button);
+}
+
+.social-icon:hover,
+.socials-link:hover {
+  fill: var(--color-button-portfolio);
+  background-color: var(--color-button-nav);
 }
 
 /**
