@@ -77,7 +77,11 @@ li {
 
 .header-nav {
   background: var(--primary-background);
-  border-bottom: 1px solid var(--cornflower, #e7e9fc);
+  border-bottom: 1px solid var(--color-button-portfolio);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  width: 1400px;
+  margin: 0 auto;
 }
 
 .header-nav .container {
@@ -136,6 +140,10 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current {
+  color: var(--color-button-nav);
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-button-nav);
@@ -151,6 +159,8 @@ li {
   background-color: var(--color-button-nav);
   transform: scaleX(0);
   transition: transform 250ms linear;
+  bottom: -1px;
+  border-radius: 2px;
 }
 
 .nav-link:hover::after,
@@ -200,7 +210,7 @@ li {
     ),
     url(../images/hero-bg.jpg);
   padding: 188px 0;
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -227,7 +237,7 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-top: 48px;
-  transition-property: color, background;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -263,16 +273,19 @@ h1 {
   justify-content: center;
 }
 
-.wraper-item {
-  flex-basis: calc((100% - 72px) / 4);
+.wraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
   border-radius: 4px;
-  background: var(--cloud, #f4f4fd);
-  padding: 24px 100px;
+  background: var(--background-color-portfolio);
   margin-bottom: 8px;
+  width: 264px;
 }
 
 .concept {
-  background: #fff;
+  background: var(--primary-background);
   padding: 120px 0;
 }
 
@@ -426,7 +439,7 @@ h1 {
   height: auto;
 }
 .avatar {
-  padding-top: 32px;
+  padding: 32px 0;
 }
 .team-social-list {
   display: flex;
@@ -471,7 +484,7 @@ h1 {
 */
 .customers {
   background-color: var(--primary-background);
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 
 .customers-title {
@@ -483,11 +496,7 @@ h1 {
   text-align: center;
   text-transform: capitalize;
   display: block;
-  align-items: center;
   margin-bottom: 72px;
-  justify-content: center;
-  align-content: center;
-  padding-top: 120px;
 }
 .customers-list {
   display: flex;
@@ -499,7 +508,7 @@ h1 {
   height: 100%;
   display: block;
   object-fit: cover;
-  fill: var(--border-customers);
+  fill: currentColor;
   transition-property: fill, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -509,6 +518,7 @@ h1 {
   display: flex;
   width: 168px;
   height: 88px;
+  color: var(--border-customers);
   border-radius: 4px;
   border: 1px solid var(--border-customers);
   justify-content: center;
@@ -534,7 +544,7 @@ h1 {
 */
 
 .portfolio {
-  background: #fff;
+  background: var(--primary-background);
   padding-top: 96px;
   padding-bottom: 120px;
   justify-content: center;
@@ -586,9 +596,6 @@ h1 {
   background: var(--primary-background);
   width: calc((100% - 48px) / 3);
   background: var(--primary-background);
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prj-card {
@@ -624,8 +631,10 @@ h1 {
   overflow: hidden;
 }
 .prj-card-link {
-  position: relative;
-  overflow: hidden;
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-overlay {
@@ -640,16 +649,13 @@ h1 {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 32px;
 }
 
 .prj-card-link:hover .text-overlay,
 .prj-card-link:focus .text-overlay {
   transform: translateY(0);
-}
-.item-card:hover,
-.item-card:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -668,9 +674,11 @@ h1 {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-box {
   display: block;
+  margin-right: 120px;
 }
 
 .footer-logo-web {
@@ -696,10 +704,6 @@ h1 {
   color: var(--background-color-portfolio);
   max-width: 264px;
   display: block;
-}
-
-.footer-socials-wraper {
-  margin-left: 120px;
 }
 
 .footer-socials {
